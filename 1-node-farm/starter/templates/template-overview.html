@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
+    />
+    <title>NODE FARM</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        padding: 4rem 2rem;
+        background: linear-gradient(to bottom right, #a8d08d, #7bc47f); /* Updated gradient colors */
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 4rem;
+        color: #ffffff; /* Ensures text visibility against the background */
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 900;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: #ffffff; /* White background for cards */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card__emoji {
+        font-size: 4rem;
+        text-align: center;
+        padding: 2rem 0;
+        background: #f0f0f0; /* Light background for emoji section */
+      }
+
+      .card__title-box {
+        background: #7bc47f; /* Updated title background color */
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .card__title {
+        font-size: 2rem;
+        color: #ffffff; /* White text for contrast */
+        font-weight: 700;
+      }
+
+      .card__details {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__detail-box {
+        flex: 1;
+        text-align: center;
+      }
+
+      .card__detail {
+        font-size: 1.4rem;
+        color: #333; /* Darker text color for readability */
+      }
+
+      .card__detail--organic {
+        font-weight: 700;
+        color: #7bc47f; /* Match organic detail color with title background */
+      }
+
+      .card__link {
+        display: block;
+        text-align: center;
+        background: #69c075; /* Slightly darker green for the link */
+        color: #ffffff;
+        padding: 1.2rem 0;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+
+      .card__link:hover {
+        background: #7bc47f; /* Match hover color with the title background */
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌽 Node Farm 🥦</h1>
+      <div class="cards-container">
+        {%PRODUCT_CARDS%}
+      </div>
+    </div>
+  </body>
+</html>
